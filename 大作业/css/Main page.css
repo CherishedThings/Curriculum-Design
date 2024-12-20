@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+/* 导航栏 */
+
+
+
+
+
+
+
+
+.header {
+    background-color: red;
+    width: 1400px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 5%; 
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+/* 左侧标题 */
+.header > .title {
+    line-height: 1; 
+    min-width: 305px; 
+    height: 100%;
+    border-radius: 14px;
+    white-space: nowrap;
+    flex-shrink: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.header > .title > span {
+    font-size: 2rem;
+    color: #fbff00;
+    font-family: '宋体', serif;
+    line-height: 1.2; 
+}
+
+/* 右侧导航 */
+.header > .nav {
+    display: flex;
+}
+
+.nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav > ul > li {
+    padding: 0.5rem 1.5rem; 
+    color: black;
+    background-color: yellow;
+    border-radius: 100px;
+    line-height: 1.5; 
+    transition: background-color 0.3s, color 0.3s;
+    height: auto;
+    align-items: center; 
+    white-space: nowrap;
+}
+
+.nav > ul > li:hover {
+    color: white;
+    background-color: aqua;
+}
+
+/* 版心内容 */
+/* 版心内容 */
+/* 版心内容 */
+/* 版心内容 */
+/* 版心内容 */
+
+
+
+
+/* 舞狮大字 */
+/* 舞狮大字 */
+/* 舞狮大字 */
+/* 舞狮大字 */
+
+.banner{
+    height: 900px;
+    width: 1320px;
+    position: absolute;
+    top: 85px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25vw;
+    letter-spacing: 20px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    color:#000 ;
+    line-height: 100%;
+    mix-blend-mode: screen;
+}
+.banner video{
+    position: absolute;
+    left: 0;
+    top: -141px;
+    width: 100%;
+    height: 990px;
+    object-fit: cover;
+
+}
+
+
+
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+/* 版心上部分 */
+
+
+
+.top{
+    width: 1320px;
+    height: 780px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.25);
+    margin-top:330%;
+    margin-bottom: 150px;
+}
+.top>.title{
+    position:relative;
+    width: 100%;
+    height: 50px;
+    background-color: greenyellow;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+.top>.title>span{
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 20px;
+}
+.images{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+.img{
+    width: 100%;
+    background-size: cover;
+}
+.img:nth-child(1){
+    background-image: url("../img/p1.jpeg");
+}
+.img:nth-child(2){
+    background-image: url("../img/p2.jpeg");
+}
+.img:nth-child(3){
+    background-image: url("../img/p3.jpeg");
+}
+.img:nth-child(4){
+    background-image: url("../img/p4.jpeg");
+}
+
+
+/* 图片切换 */
+
+.min{
+    display:flex ;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 40px;
+    width: 30%;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.m{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid rgb(255,255,255,0.5) 5px;
+    border-color: #fff;
+}
+.m:hover{
+    background-color: white;
+    border-color: black;
+}
+.m.active{
+    background-color: white;
+    border-color: black;
+}
+.button{
+    width: 100% ;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+.button-left{
+    font-size: 50px;
+    background-color: rgba(26, 29, 34, 0.2);
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 780px;
+    color: #fff;
+}
+.button-left:hover{
+    background-color: rgba(3, 6, 12, 0.4);
+}
+.button-right{
+    font-size: 50px;
+    background-color: rgba(26, 29, 34, 0.2);
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 780px;
+    color: #fff;
+}
+.button-right:hover{
+    background-color: rgba(3, 6, 12, 0.4);
+}
+
+
+
+
+/* 中间圆形导航 */
+/* 中间圆形导航 */
+/* 中间圆形导航 */
+/* 中间圆形导航 */
+/* 中间圆形导航 */
+/* 中间圆形导航 */
+
+.middle{
+    display: flex;
+    width: 1320px;
+    height: 300px;
+    margin: auto;
+    justify-content: space-around; 
+    align-items: center; 
+}
+.middle>.item{
+    flex: 1;
+    height: 264px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    opacity: 0; 
+    transform: scale(0.4); 
+    transition: all 0.6s ease-in-out; 
+}
+.middle > .item.visible {
+    opacity: 1; 
+    transform: scale(0.8); 
+}
+.middle > .item > p {
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    margin: 0; 
+    font-family: "華文行楷"; 
+    font-size: 1.5rem; 
+    line-height: 1.5; 
+    font-weight: bold; 
+    letter-spacing: 3px;
+}
+
+.middle>.item:hover{
+    transform: scale(0.6); 
+    transition: all 0.3s;
+}
+
+
+
+
+/* 主要内容 */
+/* 主要内容 */
+/* 主要内容 */
+/* 主要内容 */
+/* 主要内容 */
+/* 主要内容 */
+
+
+
+.bottom {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* 历史渊源 */
+/* 历史渊源 */
+
+
+.history {
+    display: flex;
+    width: 1320px;
+    height: 840px;
+    background-color: pink;
+}
+
+.his-title {
+    height: 100%;
+    width: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background-color: darkgreen;
+    font-family: "華文行楷";
+    letter-spacing: 40px;
+}
+
+.his {
+    position: relative;
+    flex-grow: 1;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+}
+
+.his-writtings {
+    position: relative; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.his-writting {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; 
+    transform: translateX(100%); 
+}
+
+.his-writting.active { 
+    transform: translateX(0);
+}
+
+
+.his>.his-writtings p {
+    text-indent: 3em;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.his h3 {
+    text-indent: 1em;
+    font-size: 30px;
+}
+
+.his>.his-writtings span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+/* 指示点 */
+.hin {
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    bottom: 30px; 
+    left: -80px;
+    right: 0;
+    z-index: 999;
+}
+
+.h {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid rgb(255,255,255,0.5) 5px;
+    border-color: #fff;
+    margin: 0 30px;
+}
+
+.h:hover,
+.h.active {
+    background-color: white;
+    border-color: black;
+}
+
+/* 左右按钮 */
+.his-button-left,
+.his-button-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: rgba(26, 29, 34, 0.2);
+    color: #fff;
+    font-size: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.his-button-left {
+    left: 0; 
+}
+
+.his-button-right {
+    right: 0; 
+}
+
+.his-button-left:hover,
+.his-button-right:hover {
+    background-color: rgba(3, 6, 12, 0.4);
+}
+
+
+/* 表演形式 */
+/* 表演形式 */
+/* 表演形式 */
+/* 表演形式 */
+/* 表演形式 */
+
+
+.performance-form{
+    display: flex;
+    width: 1320px;
+    height: 840px;
+    background-color: #78792d;
+    margin-top: 100px;
+}
+.form-title{
+    height: 100%;
+    width: 120px;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background-color: rgb(89, 169, 89);
+    font-family: "華文行楷";
+    letter-spacing: 40px;
+}
+.form{
+    position: relative;
+    flex-grow: 1;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+}
+.form-writtings{
+    position: relative; 
+    height: 100%; 
+    overflow: hidden; 
+}
+.form-writting {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; 
+    transform: translateX(100%); 
+}
+.form-writting.active { 
+    transform: translateX(0);
+}
+
+
+/* 表演形式字体设计 */
+
+.form>.form-writtings p{
+    text-indent: 3em;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.form h2{
+    text-indent: 1em;
+    font-size: 40px;
+}
+.form h3{
+    text-indent: 1em;
+    font-size: 30px;
+}
+.form span{
+    font-style: 1.5em;
+    font-weight: bold;
+    position: relative;
+}
+.form span::before{
+    content: "•";
+    font-size: 1em;
+    margin-right: 0.2em;
+    color: black;
+}
+
+
+#p{
+    text-indent: 1em;
+}
+
+
+
+/* 表演形式按钮 */
+.fin{
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    bottom: 30px; 
+    left: -80px;
+    right: 0;
+    z-index: 999;
+}
+.f{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid rgb(255,255,255,0.5) 5px;
+    border-color: #fff;
+    margin: 0 30px;
+}
+.f:hover,
+.f.active {
+    background-color: white;
+    border-color: black;
+}
+/* 左右按钮 */
+.form-button-left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: rgba(26, 29, 34, 0.2);
+    color: #fff;
+    font-size: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+.form-button-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: rgba(26, 29, 34, 0.2);
+    color: #fff;
+    font-size: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.form-button-left {
+    left: 0; 
+}
+
+.form-button-right {
+    right: 0; 
+}
+
+.form-button-left:hover,
+.form-button-right:hover {
+    background-color: rgba(3, 6, 12, 0.4);
+}
+
+
+
+/* 服饰道具 */
+/* 服饰道具 */
+/* 服饰道具 */
+/* 服饰道具 */
+/* 服饰道具 */
+
+
+

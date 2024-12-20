@@ -1,0 +1,170 @@
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 整体页面样式 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(125deg, #8e44ad, #f42601, #efe303, #61ef03e2, #e74c3c, #8e44ad, #e74c3c);
+    background-size: 500%;
+    animation: bgAnimation 15s linear infinite;
+}
+
+/* 容器和文本样式 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 确保子元素水平居中 */
+    justify-content: center; /* 确保子元素垂直居中 */
+    width: 100%; /* 调整宽度以适应不同屏幕尺寸 */
+    max-width: 600px; /* 设置最大宽度 */
+    height: 900px;
+    text-align: center; /* 确保文本内容居中 */
+    gap: 20px; /* 子元素之间的间距 */
+}
+
+/* 文本样式 */
+
+
+/* 点击进入按钮 */
+.text {
+    background-color: #89e8ed;
+    font-size: 50px;
+    font-family: 宋体;
+    border: 5px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    display: inline-block; /* 确保 transform 可以正确应用 */
+    padding: 10px 20px; /* 添加内边距 */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+.text:hover {
+    background-color: rgb(9, 91, 121);
+}
+.button {
+    margin-top: 20px; /* 可选：为按钮顶部添加一些空间 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+.button:hover .text {
+    background-color: rgb(9, 91, 121);
+    transform: scale(1.1); /* 放大按钮 */
+}
+.text:active {
+    background-color: #6c757d; /* 更深的颜色表示按下状态 */
+    transform: scale(0.9); /* 缩小按钮模拟按下效果 */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* 内阴影增加按下感 */
+}
+
+
+/* 舞狮 */
+.p2 img, .p1 img {
+    height: 600px;
+    margin-top: 300px;
+}
+
+/* 鞭炮样式 */
+.fire {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+    z-index: 1;
+}
+.fire1 img, .fire2 img {
+    width: 200px;
+    height: auto;
+}
+.fire1 {
+    margin-left: 10%;
+}
+
+.fire2 {
+    margin-right: 10%;
+}
+
+/* 特殊效果 - tt 样式 */
+
+
+.tt {
+    font-size: 40px;
+    letter-spacing: 20px;
+    display: inline-block; /* 确保 transform 可以正确应用 */
+    animation: 
+        colorFlash 0.35s infinite, /* 颜色闪烁动画 */
+        scaleChange 1s ease-in-out infinite; /* 大小变化动画 */
+    transform-origin: center; /* 设置旋转中心点为元素的中心 */
+    text-shadow: 
+        2px 2px 0px rgba(0, 0, 0, 0.7), /* 描边效果 */
+        4px 4px 0px rgba(0, 0, 0, 0.7),
+        6px 6px 0px rgba(0, 0, 0, 0.7),
+        8px 8px 10px rgba(0, 0, 0, 0.5); /* 立体效果 */
+}
+/* 强制 .tt 中的文本显示在一行 */
+.tt1 {
+    font-size: 40px;
+    letter-spacing: 20px;
+    display: inline-block; /* 确保 transform 可以正确应用 */
+    animation: 
+        colorFlash 0.35s infinite, /* 颜色闪烁动画 */
+        scaleChange1 1s ease-in-out infinite; /* 大小变化动画 */
+    transform-origin: center; /* 设置旋转中心点为元素的中心 */
+    text-shadow: 
+        2px 2px 0px rgba(0, 0, 0, 0.7), /* 描边效果 */
+        4px 4px 0px rgba(0, 0, 0, 0.7),
+        6px 6px 0px rgba(0, 0, 0, 0.7),
+        8px 8px 10px rgba(0, 0, 0, 0.5); /* 立体效果 */
+}
+
+
+/*！！！！！！！！ 动画 ！！！！！！！！*/
+/* ！！！！！！！！动画 ！！！！！！！！*/
+
+/* 颜色闪烁动画 */
+@keyframes colorFlash {
+    0%, 100% { color: red; }
+    33% { color: yellow; }
+    66% { color: rgb(0, 238, 255); }
+}
+
+/* 大小变化动画 */
+@keyframes scaleChange {
+    0%, 100% { transform: translateX(-350px) translateY(100px)rotate(-45deg) scale(1); } /* 恢复原大小，保持旋转和位移 */
+    50% { transform: translateX(-350px) translateY(100px)rotate(-45deg) scale(1.2); }    /* 放大1.2倍，保持旋转和位移 */
+}
+@keyframes scaleChange1 {
+    0%, 100% { transform: translateX(350px) translateY(-4px)rotate(45deg) scale(1); } /* 恢复原大小，保持旋转和位移 */
+    50% { transform: translateX(350px) translateY(-4px)rotate(45deg) scale(1.2); }    /* 放大1.2倍，保持旋转和位移 */
+}
+/* 点击button后页面动画 */
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* 背景动效 */
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
